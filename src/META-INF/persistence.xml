@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="Pizzaria" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>pizzaria.model.vo.Bairro</class>
+    <class>pizzaria.model.vo.Cardapio</class>
+    <class>pizzaria.model.vo.Cidade</class>
+    <class>pizzaria.model.vo.Cliente</class>
+    <class>pizzaria.model.vo.Endereco</class>
+    <class>pizzaria.model.vo.Estado</class>
+    <class>pizzaria.model.vo.Estoque</class>
+    <class>pizzaria.model.vo.Fornecedor</class>
+    <class>pizzaria.model.vo.Funcionario</class>
+    <class>pizzaria.model.vo.ItensPedido</class>
+    <class>pizzaria.model.vo.Pagamento</class>
+    <class>pizzaria.model.vo.Pedido</class>
+    <class>pizzaria.model.vo.Pessoa</class>
+    <class>pizzaria.model.vo.Produto</class>
+    <class>pizzaria.model.vo.Telefone</class>
+    <properties>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/pizza"/>
+      <property name="javax.persistence.jdbc.password" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
+  </persistence-unit>
+</persistence>
